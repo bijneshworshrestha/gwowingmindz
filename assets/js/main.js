@@ -40,6 +40,12 @@ if (window.gsap && window.ScrollTrigger && !window.matchMedia('(prefers-reduced-
 (function () {
   var form = document.getElementById('contact-form');
   if (!form) return;
+  if (!form.getAttribute('data-endpoint')) {
+    form.hidden = true;
+    var fb = document.getElementById('contact-fallback');
+    if (fb) fb.hidden = false;
+    return;
+  }
   var status = document.getElementById('f-status');
   var send = document.getElementById('f-send');
   var map = { family: 'Family', school: 'School or library', partner: 'Partner or publisher' };

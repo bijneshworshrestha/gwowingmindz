@@ -9,9 +9,8 @@
 <meta property="og:description" content="Children's stories with the animals of Nepal.">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/fredoka-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/nunito-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -287,6 +286,11 @@
     </div>
 
     <div class="contact" id="contact">
+      <div class="contact-card contact-fallback" id="contact-fallback" hidden>
+        <h3>Say hello on Instagram</h3>
+        <p class="contact-note">Messages from this page are not switched on yet. For now, send us a message on Instagram and tell us who you are and what you are looking for.</p>
+        <a href="https://www.instagram.com/gwowingmindz/" target="_blank" rel="noopener" class="btn btn-orange">Message @gwowingmindz</a>
+      </div>
       <form class="contact-card" id="contact-form" data-endpoint="" novalidate>
         <h3>Send a message</h3>
         <p class="contact-note">Families, schools, libraries, publishers: all are welcome here.</p>
@@ -370,8 +374,8 @@
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
 
 <script src="assets/js/main.js"></script>
 </body>

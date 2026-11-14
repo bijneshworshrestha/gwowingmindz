@@ -1,3 +1,11 @@
+@font-face { font-family: 'Fredoka'; font-weight: 400; font-style: normal; font-display: swap; src: url('../fonts/fredoka-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Fredoka'; font-weight: 500; font-style: normal; font-display: swap; src: url('../fonts/fredoka-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Fredoka'; font-weight: 600; font-style: normal; font-display: swap; src: url('../fonts/fredoka-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Fredoka'; font-weight: 700; font-style: normal; font-display: swap; src: url('../fonts/fredoka-latin-700-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Nunito'; font-weight: 400; font-style: normal; font-display: swap; src: url('../fonts/nunito-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Nunito'; font-weight: 600; font-style: normal; font-display: swap; src: url('../fonts/nunito-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Nunito'; font-weight: 700; font-style: normal; font-display: swap; src: url('../fonts/nunito-latin-700-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Nunito'; font-weight: 800; font-style: normal; font-display: swap; src: url('../fonts/nunito-latin-800-normal.woff2') format('woff2'); }
 /* Palette is taken from the logo: fur orange, denim blue, mud brown, on cream. */
 :root {
   --cream: #FFF8EE;
@@ -293,3 +301,7 @@ section { padding-block: clamp(56px, 8vw, 104px); scroll-margin-top: 76px; }
 #f-send[disabled] { opacity: .6; cursor: progress; }
 @media (max-width: 640px) { .field-row { grid-template-columns: 1fr; } }
 .get-card { align-content: start; } .get-card h3 { min-height: 2.6rem; display: grid; align-items: center; }
+
+.contact-fallback { text-align: center; justify-items: center; }
+.contact-card[hidden] { display: none !important; }
+.contact-fallback .btn { justify-self: center; align-self: start; }
