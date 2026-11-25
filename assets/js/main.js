@@ -15,6 +15,8 @@ function movePanel(id, dir) {
 }
 ['bw', 'rp'].forEach(function (id) {
   var el = document.getElementById('carousel-' + id), sx = 0;
+  if (!el) return;
+  if (!el) return;
   el.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
   el.addEventListener('touchend', function (e) {
     var dx = sx - e.changedTouches[0].clientX;
@@ -25,8 +27,6 @@ function movePanel(id, dir) {
 /* Subtle reveal only. Everything is visible without it. */
 if (window.gsap && window.ScrollTrigger && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   gsap.registerPlugin(ScrollTrigger);
-  gsap.from('.hero-text > *', { opacity: 0, y: 16, duration: .45, stagger: .08, ease: 'power1.out' });
-  gsap.from('.hero-cast a', { opacity: 0, y: 12, duration: .45, stagger: .04, ease: 'power1.out' });
   ScrollTrigger.batch('.reveal', {
     start: 'top 90%', once: true,
     onEnter: function (els) { gsap.from(els, { opacity: 0, y: 14, duration: .4, stagger: .06, ease: 'power1.out' }); }
